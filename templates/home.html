@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% set css_file = "home.css" %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h1 class="fw-bold">Welcome to the ATM App</h1>
+    <p class="text-muted">Manage your accounts easily</p>
+</div>
+
+{% if accounts %}
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered align-middle shadow-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th>Account No</th>
+                    <th>Name</th>
+                    <th>Balance (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for acc_no, info in accounts.items() %}
+                <tr>
+                    <td><strong>{{ acc_no }}</strong></td>
+                    <td>{{ info.name }}</td>
+                    <td>₹{{ info.balance }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% else %}
+    <div class="alert alert-info text-center shadow-sm">
+        No accounts available.
+    </div>
+{% endif %}
+{% endblock %}

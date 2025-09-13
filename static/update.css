@@ -1,0 +1,46 @@
+/* Background with overlay */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url("../images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+/* Update container */
+.update-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* Form inputs */
+.update-form input {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Custom buttons */
+.btn-success {
+    font-weight: 600;
+    border-radius: 8px;
+}
+.btn-danger {
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+/* Responsive fix for small screens */
+@media (max-width: 576px) {
+    .update-container {
+        margin: 40px 15px;
+        padding: 20px;
+    }
+    .d-flex {
+        flex-direction: column;
+    }
+    .d-flex .btn {
+        width: 100% !important;
+    }
+}

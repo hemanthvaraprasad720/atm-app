@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Delete Account{% endblock %}
+{% set css_file = "delete.css" %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-danger mb-4">Delete Account</h2>
+
+        <form method="post" 
+              onsubmit="return confirm('Are you sure you want to delete this account?');">
+
+            <div class="mb-3">
+                <label for="acc_no" class="form-label">Account No:</label>
+                <input type="text" class="form-control" id="acc_no" name="acc_no" required>
+            </div>
+
+            <button type="submit" class="btn btn-danger w-100">Delete</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

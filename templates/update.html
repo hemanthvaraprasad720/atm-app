@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Update{% endblock %}
+{% set css_file = "update.css" %}
+
+{% block content %}
+<div class="update-container shadow-lg">
+    <h1 class="text-center fw-bold mb-4">Update Balance</h1>
+
+    {% if message %}
+        <div class="alert alert-{{ 'success' if msg_type=='success' else 'danger' }} text-center">
+            {{ message }}
+        </div>
+    {% endif %}
+
+    <form method="post" class="update-form">
+        <div class="mb-3">
+            <label for="acc_no" class="form-label fw-semibold">Account No:</label>
+            <input type="text" name="acc_no" id="acc_no" class="form-control" placeholder="Enter 10-digit account number" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="amount" class="form-label fw-semibold">Amount:</label>
+            <input type="number" name="amount" id="amount" class="form-control" step="0.01" min="0.01" placeholder="Enter amount" required>
+        </div>
+
+        <div class="d-flex gap-3 mt-4">
+            <button type="submit" name="action" value="deposit" class="btn btn-success w-50">Deposit</button>
+            <button type="submit" name="action" value="withdraw" class="btn btn-danger w-50">Withdraw</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Balance{% endblock %}
+{% set css_file = "balance.css" %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h1 class="fw-bold">Check Balance</h1>
+</div>
+
+<form method="post" class="shadow-sm p-4 rounded bg-white">
+    <div class="mb-3">
+        <label for="acc_no" class="form-label fw-semibold">Account No:</label>
+        <input type="text" id="acc_no" name="acc_no" class="form-control" placeholder="Enter your 10-digit account number" required>
+    </div>
+    <button type="submit" class="btn btn-danger w-100 fw-bold">Check</button>
+</form>
+
+{% if account %}
+<div class="card mt-4 shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title text-center mb-3">Account Details</h5>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Account Holder:</strong> {{ account.name }}</li>
+            <li class="list-group-item"><strong>Balance:</strong> ₹{{ account.balance }}</li>
+        </ul>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

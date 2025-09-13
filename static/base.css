@@ -1,0 +1,62 @@
+/* Apply Roboto font everywhere */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; /* light gray background */
+    color: #212529;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar customization */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Navbar brand */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Active/hover nav links */
+.nav-link {
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #0d6efd !important; /* Bootstrap primary blue */
+}
+
+/* Main content spacing */
+main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Footer styling */
+footer {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Utility: center all forms inside main */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Buttons customization */
+.btn {
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Success and error messages */
+.alert-success {
+    border-left: 5px solid #198754;
+}
+.alert-danger {
+    border-left: 5px solid #dc3545;
+}

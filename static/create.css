@@ -1,0 +1,21 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url("../images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+.card {
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.success { 
+    color: green; 
+    font-weight: bold;
+}
+
+.error { 
+    color: red; 
+    font-weight: bold;
+}
