@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>{% block title %}{% endblock %} | ATM APP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,6 +16,8 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="{{ url_for('static', filename='icon.ico') }}" type="image/x-icon">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
